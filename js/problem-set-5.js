@@ -47,10 +47,10 @@ function mario() {
       space = space + " ";
       z = z + 1;
     }
+    marioResult.innerHTML += space + hashtag + "<br/>";
     space = " ";
     z = z + 1;
     y = y + 1;
-    marioResult.innerHTML += space + hashtag + "<br/>";
   }
 
   ////////////////////////// DO NOT MODIFY
