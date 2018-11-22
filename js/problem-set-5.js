@@ -97,7 +97,7 @@ function marioAgain() {
     height = prompt("Please enter an integer from 1 to 23:");
   } while ((Number.isInteger(height)) || (1 <= height && height <= 23) == false);
   
-  let marioResult = document.getElementById('mario-easy-output');
+  let marioHardResult = document.getElementById('mario-hard-output');
   let x = 2;
   let space1 = " ";
   
@@ -107,7 +107,7 @@ function marioAgain() {
   }
   
   let hashtag = "##";
-  marioResult.innerHTML = space1 + hashtag + " " + hashtag + "<br/>";
+  marioHardResult.innerHTML = space1 + hashtag + " " + hashtag + "<br/>";
   
   let y = 1;
   let z = 3;
@@ -120,7 +120,7 @@ function marioAgain() {
       space = space + " ";
       z = z + 1;
     }
-    marioResult.innerHTML += space + hashtag + " " + hashtag + "<br/>";
+    marioHardResult.innerHTML += space + hashtag + " " + hashtag + "<br/>";
     space = " ";
     z = zSub + 1;
     zSub = zSub + 1
