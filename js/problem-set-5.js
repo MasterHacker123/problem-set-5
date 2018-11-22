@@ -32,7 +32,7 @@ function mario() {
   
   let marioResult = document.getElementById('mario-easy-output');
   let x = 1;
-  let space1 = "&nbsp&nbsp";
+  let space1 = "&nbsp&nbsp&nbsp";
   
   while (x < (height - 1)) {
     space1 = space1 + "&nbsp&nbsp";
@@ -45,7 +45,7 @@ function mario() {
   let y = 1;
   let z = 2;
   let zSub = 2;
-  let space = "&nbsp&nbsp";
+  let space = "&nbsp&nbsp&nbsp";
   
   while (y < height) {
     hashtag = hashtag + "#";
