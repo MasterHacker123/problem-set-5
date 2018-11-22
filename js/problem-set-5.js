@@ -31,7 +31,12 @@ function mario() {
   } while ((Number.isInteger(height)) || (1 <= height && height <= 23) == false);
 
   let marioResult = document.getElementById('mario-easy-output');
-  let spacing = " ";
+  let y = 1;
+  let space = " ";
+  while (y < (height - 1)) {
+    space = space + 1;
+    y = y + 1
+  }
   let hashtag = "##";
   marioResult.innerHTML = hashtag + "<br/>";
   let x = 1;
