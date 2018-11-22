@@ -49,7 +49,7 @@ function mario() {
   
   while (y < height) {
     hashtag = hashtag + "#";
-    while (z < (height - 1)) {
+    while (z < (height - 2)) {
       space = space + "&nbsp&nbsp";
       z = z + 1;
     }
