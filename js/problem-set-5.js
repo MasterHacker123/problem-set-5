@@ -45,11 +45,11 @@ function mario() {
   let y = 1;
   let z = 3;
   let zSub = 3;
-  let space = "&nbsp&nbsp&nbsp";
+  let space = "&nbsp&nbsp";
   
   while (y < (height - 1)) {
     hashtag = hashtag + "#";
-    while (z < (height - 2)) {
+    while (z < (height - 1)) {
       space = space + "&nbsp&nbsp";
       z = z + 1;
     }
