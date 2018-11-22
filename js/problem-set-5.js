@@ -37,17 +37,18 @@ function mario() {
     x = x + 1;
   }
   let hashtag = "##";
-  marioResult.innerHTML = hashtag + "<br/>";
+  marioResult.innerHTML = space1 + hashtag + "<br/>";
   let y = 1;
   let z = 2;
   let space = " ";
   while (y < height) {
     hashtag = hashtag + "#";
-    marioResult.innerHTML += hashtag + "<br/>";
+    marioResult.innerHTML += space + hashtag + "<br/>";
     y = y + 1;
     while (z < height) {
       space = space + " ";
     }
+    space = " "
     z = z + 1;
   }
 
