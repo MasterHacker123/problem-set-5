@@ -34,7 +34,7 @@ function mario() {
   let x = 1;
   let space1 = "&nbsp&nbsp";
   
-  while (x < height - 1) {
+  while (x < (height - 1)) {
     space1 = space1 + "&nbsp&nbsp";
     x = x + 1;
   }
@@ -49,7 +49,7 @@ function mario() {
   
   while (y < height) {
     hashtag = hashtag + "#";
-    while (z < height - 1) {
+    while (z < (height - 1)) {
       space = space + "&nbsp&nbsp";
       z = z + 1;
     }
