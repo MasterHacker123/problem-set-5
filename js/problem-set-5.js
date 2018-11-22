@@ -50,7 +50,6 @@ function mario() {
     }
     z = z + 1;
   }
-}
 
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
