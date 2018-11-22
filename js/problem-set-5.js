@@ -46,6 +46,7 @@ function mario() {
   let z = 2;
   let zSub = 2;
   let space;
+  let spaceReset;
   
   while (y < height) {
     hashtag = hashtag + "#";
@@ -54,7 +55,7 @@ function mario() {
       z = z + 1;
     }
     marioResult.innerHTML += space + hashtag + "<br/>";
-    space = "";
+    space = spaceReset;
     z = zSub + 1;
     zSub = zSub + 1;
     y = y + 1;
