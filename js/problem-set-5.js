@@ -61,6 +61,7 @@ function mario() {
   } 
   while (y < height) {
     marioResult.innerHTML += hashtag;
+    y = y + 1;
   }
 
   ////////////////////////// DO NOT MODIFY
