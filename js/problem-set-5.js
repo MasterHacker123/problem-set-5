@@ -31,7 +31,7 @@ function mario() {
   } while ((Number.isInteger(height)) || (1 <= height && height <= 23) == false);
   
   let marioResult = document.getElementById('mario-easy-output');
-  let x = 2;
+  let x = 1;
   let space1 = "&nbsp&nbsp&nbsp";
   
   while (x < (height - 1)) {
@@ -47,7 +47,7 @@ function mario() {
   let zSub = 3;
   let space = "&nbsp&nbsp&nbsp";
   
-  while (y < (height-1)) {
+  while (y < (height - 1)) {
     hashtag = hashtag + "#";
     while (z < (height - 2)) {
       space = space + "&nbsp&nbsp";
