@@ -40,7 +40,7 @@ function mario() {
   }
   
   let hashtag = "##";
-  let display1 = space1 + hashtag
+  let display1 = space1 + hashtag;
   marioResult.innerHTML = display1.substring(2, display1.length) + "<br/>";
   
   let display;
