@@ -53,7 +53,7 @@ function mario() {
       space = space + "&nbsp&nbsp";
       z = z + 1;
     }
-    marioResult.innerHTML += hashtag + space + "<br/>";
+    marioResult.innerHTML += space + hashtag + "<br/>";
     space = "&nbsp&nbsp";
     z = zSub + 1;
     zSub = zSub + 1;
