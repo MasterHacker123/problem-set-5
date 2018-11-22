@@ -32,7 +32,7 @@ function mario() {
   
   let marioResult = document.getElementById('mario-easy-output');
   let x = 1;
-  let space1 = "&nbsp&nbsp&nbsp";
+  let space1 = "&nbsp&nbsp";
   
   while (x < (height - 1)) {
     space1 = space1 + "&nbsp&nbsp";
