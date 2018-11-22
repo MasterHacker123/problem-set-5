@@ -29,18 +29,23 @@ function mario() {
   do {
     height = prompt("Please enter an integer from 1 to 23:");
   } while ((Number.isInteger(height)) || (1 <= height && height <= 23) == false);
+  
   let marioResult = document.getElementById('mario-easy-output');
   let x = 2;
   let space1 = " ";
+  
   while (x < height) {
     space1 = space1 + " ";
     x = x + 1;
   }
+  
   let hashtag = "##";
   marioResult.innerHTML = space1 + hashtag + "<br/>";
+  
   let y = 1;
   let z = 3;
   let space = " ";
+  
   while (y < height) {
     hashtag = hashtag + "#";
     while (z < height) {
@@ -89,28 +94,33 @@ function marioAgain() {
   do {
     height = prompt("Please enter an integer from 1 to 23:");
   } while ((Number.isInteger(height)) || (1 <= height && height <= 23) == false);
+  
   let marioResult = document.getElementById('mario-easy-output');
   let x = 2;
   let space1 = " ";
+  
   while (x < height) {
     space1 = space1 + " ";
     x = x + 1;
   }
+  
   let hashtag = "##";
   marioResult.innerHTML = space1 + hashtag + " " + hashtag + "<br/>";
+  
   let y = 1;
   let z = 3;
   let space = " ";
+  
   while (y < height) {
     hashtag = hashtag + "#";
     while (z < height) {
       space = space + " ";
       z = z + 1;
     }
+    marioResult.innerHTML += space + hashtag + " " + hashtag + "<br/>";
     space = " ";
     z = z + 1;
     y = y + 1;
-    marioResult.innerHTML += space + hashtag + " " + hashtag + "<br/>";
   }
 
   //////////////////////////////// DO NOT MODIFY
