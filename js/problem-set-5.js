@@ -45,7 +45,7 @@ function mario() {
   let y = 1;
   let z = 2;
   let zSub = 2;
-  let space = "&nbsp&nbsp";
+  let space;
   
   while (y < (height - 1)) {
     hashtag = hashtag + "#";
