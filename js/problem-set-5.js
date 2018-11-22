@@ -34,16 +34,14 @@ function mario() {
   let x = 1;
   let space1 = "&nbsp&nbsp";
   
-  while (x < height) {
+  while (x < (height - 1)) {
     space1 = space1 + "&nbsp&nbsp";
     x = x + 1;
   }
   
   let hashtag = "##";
-  let display1 = space1 + hashtag;
-  marioResult.innerHTML = display1.substring(2, display1.length) + "<br/>";
+  marioResult.innerHTML = space1 + hashtag + "<br/>";
   
-  let display;
   let y = 1;
   let z = 2;
   let zSub = 2;
@@ -51,12 +49,11 @@ function mario() {
   
   while (y < height) {
     hashtag = hashtag + "#";
-    while (z < height) {
+    while (z < (height - 1)) {
       space = space + "&nbsp&nbsp";
       z = z + 1;
     }
-    display = hashtag + space;
-    marioResult.innerHTML += display.substring(2, display.length) + "<br/>";
+    marioResult.innerHTML += hashtag + space + "<br/>";
     space = "&nbsp&nbsp";
     z = zSub + 1;
     zSub = zSub + 1;
