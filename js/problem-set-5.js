@@ -32,7 +32,7 @@ function mario() {
   
   let marioResult = document.getElementById('mario-easy-output');
   let x = 1;
-  let space1 = "&nbsp&nbsp";
+  let space1;
   
   while (x < height) {
     space1 = space1 + "&nbsp&nbsp";
@@ -45,7 +45,7 @@ function mario() {
   let y = 1;
   let z = 2;
   let zSub = 2;
-  let space = "&nbsp&nbsp";
+  let space;
   
   while (y < height) {
     hashtag = hashtag + "#";
@@ -54,7 +54,7 @@ function mario() {
       z = z + 1;
     }
     marioResult.innerHTML += space + hashtag + "<br/>";
-    space = "&nbsp&nbsp";
+    space = "";
     z = zSub + 1;
     zSub = zSub + 1;
     y = y + 1;
@@ -99,7 +99,7 @@ function marioAgain() {
   
   let marioHardResult = document.getElementById('mario-hard-output');
   let x = 2;
-  let space1 = "&nbsp&nbsp";
+  let space1;
   
   while (x < height) {
     space1 = space1 + "&nbsp&nbsp";
@@ -112,7 +112,7 @@ function marioAgain() {
   let y = 1;
   let z = 3;
   let zSub = 3;
-  let space = "&nbsp&nbsp";
+  let space;
   
   while (y < height) {
     hashtag = hashtag + "#";
@@ -121,7 +121,7 @@ function marioAgain() {
       z = z + 1;
     }
     marioHardResult.innerHTML += space + hashtag + "&nbsp&nbsp" + hashtag + "<br/>";
-    space = "&nbsp&nbsp";
+    space = "";
     z = zSub + 1;
     zSub = zSub + 1
     y = y + 1;
