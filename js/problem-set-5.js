@@ -43,13 +43,13 @@ function mario() {
   marioResult.innerHTML = space1 + hashtag + "<br/>";
   
   let y = 1;
-  let z = 1;
-  let zSub = 1;
+  let z = 2;
+  let zSub = 2;
   let space = "&nbsp&nbsp";
   
   while (y < (height - 1)) {
     hashtag = hashtag + "#";
-    while (z < (height - 2)) {
+    while (z < (height - 1)) {
       space = space + "&nbsp&nbsp";
       z = z + 1;
     }
