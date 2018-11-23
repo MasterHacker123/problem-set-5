@@ -43,8 +43,8 @@ function mario() {
   marioResult.innerHTML = space1 + hashtag + "<br/>";
   
   let y = 1;
-  let z = 2;
-  let zSub = 2;
+  let z = 1;
+  let zSub = 1;
   let space = "&nbsp&nbsp";
   
   while (y < (height - 1)) {
