@@ -28,42 +28,45 @@ function mario() {
 
   do {
     height = prompt("Please enter an integer from 1 to 23:");
-  } while ((Number.isInteger(height)) || (1 <= height && height <= 23) == false);
-  
+  } while (height < 1 || height > 23 || height % 1 != 0);
+
   let marioResult = document.getElementById('mario-easy-output');
   let x = 1;
-  let space1 = "&nbsp&nbsp";
-  
-  while (x < (height - 1)) {
-    space1 = space1 + "&nbsp&nbsp";
+  let space1 = "";
+  height = Number(height);
+
+  while (x < height) {
+    space1 = space1 + "&nbsp";
     x = x + 1;
   }
-  
+
   let hashtag = "##";
-  marioResult.innerHTML = space1 + hashtag + "<br/>";
-  
+  let result = space1 + hashtag + "<br/>";
+
   let y = 1;
   let z = 1;
   let zSub = 1;
-  let space = "&nbsp&nbsp";
-  
+  let space = "&nbsp";
+
   while (y < (height - 1)) {
     hashtag = hashtag + "#";
     while (z < (height - 2)) {
-      space = space + "&nbsp&nbsp";
+      space = space + "&nbsp";
       z = z + 1;
     }
-    marioResult.innerHTML += space + hashtag + "<br/>";
-    space = "&nbsp&nbsp";
+    result = result + space + hashtag + "<br/>";
+    space = "&nbsp";
     z = zSub + 1;
     zSub = zSub + 1;
     y = y + 1;
-  } 
+  }
   while (y < height) {
     hashtag = hashtag + "#";
-    marioResult.innerHTML += hashtag;
+    result = result + hashtag + "<br/>";
     y = y + 1;
   }
+
+  marioResult.innerHTML = "<code>" + result + "</code>";
 
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
@@ -100,38 +103,45 @@ function marioAgain() {
 
   do {
     height = prompt("Please enter an integer from 1 to 23:");
-  } while ((Number.isInteger(height)) || (1 <= height && height <= 23) == false);
-  
+  } while (height < 1 || height > 23 || height % 1 != 0);
+
   let marioHardResult = document.getElementById('mario-hard-output');
   let x = 1;
-  let space1 = "&nbsp&nbsp";
-  
-  while (x < (height - 1)) {
-    space1 = space1 + "&nbsp&nbsp";
+  let space1 = "";
+  height = Number(height);
+
+  while (x < height) {
+    space1 = space1 + "&nbsp";
     x = x + 1;
   }
-  
+
   let hashtag = "##";
-  marioHardResult.innerHTML = space1 + hashtag + "&nbsp&nbsp" + hashtag + "<br/>";
-  
+  let resultTwo = space1 + hashtag + "&nbsp&nbsp" + hashtag + "<br/>";
+
   let y = 1;
   let z = 1;
   let zSub = 1;
-  let space = "&nbsp&nbsp";
-  
-  while (y < height) {
+  let space = "&nbsp";
+
+  while (y < (height - 1)) {
     hashtag = hashtag + "#";
     while (z < (height - 2)) {
-      space = space + "&nbsp&nbsp";
+      space = space + "&nbsp";
       z = z + 1;
     }
-    marioHardResult.innerHTML += space + hashtag + "&nbsp&nbsp" + hashtag + "<br/>";
-    space = "";
+    resultTwo = resultTwo + space + hashtag + "&nbsp&nbsp" + hashtag + "<br/>";
+    space = "&nbsp";
     z = zSub + 1;
-    zSub = zSub + 1
+    zSub = zSub + 1;
+    y = y + 1;
+  }
+  while (y < height) {
+    hashtag = hashtag + "#";
+    resultTwo = resultTwo + hashtag + "&nbsp&nbsp" + hashtag + "<br/>";
     y = y + 1;
   }
 
+  marioHardResult.innerHTML = "<code>" + resultTwo + "</code>";
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
   //////////////////////////////// DO NOT MODIFY
