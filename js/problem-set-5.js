@@ -193,7 +193,31 @@ function credit() {
   let card; // DO NOT MODIFY
   //////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+  do {
+    card = prompt("Please enter your credit card number:")
+  } while ((card % 1) !== 0);
+
+  let cardTwo = card.toString();
+  stringLength = card.length;
+  i = cardTwo.length - 2;
+  let value = "";
+  let totalSum = "";
+  let sum = "";
+
+  while (i >= 0) {
+    value = 2 * Number(cardTwo.substring(i));
+    if ((value >= 10) == true) {
+      value = number.toString();
+      sum = Number(number.substring(0)) + Number(number.substring(1));
+    } else {
+      sum = value;
+    }
+
+
+    totalSum = sum +
+    i = i - 2;
+  }
+
 
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
