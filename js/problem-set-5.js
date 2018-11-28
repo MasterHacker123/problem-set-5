@@ -194,31 +194,56 @@ function credit() {
   //////////// DO NOT MODIFY
 
   do {
-    card = prompt("Please enter your credit card number:")
-  } while ((card % 1) !== 0);
+    card = prompt("Please enter your credit card number:");
+  } while ((card % 1) != 0);
 
-  let cardTwo = card.toString();
-  stringLength = card.length;
-  i = cardTwo.length - 2;
+  let cardTwo = card;
+  let i = ((cardTwo.length) - 2);
   let value = "";
   let totalSum = "";
   let sum = "";
 
   while (i >= 0) {
-    value = 2 * Number(cardTwo.substring(i));
-    if ((value >= 10) == true) {
-      value = number.toString();
-      sum = Number(number.substring(0)) + Number(number.substring(1));
+    value = 2 * Number(cardTwo.charAt(i));
+    if (value >= 10) {
+      value = value.toString();
+      sum = Number(value.charAt(0)) + Number(value.charAt(1));
     } else {
       sum = value;
     }
+    totalSum = Number(totalSum) + sum;
+    i = i - 2;
+  }
 
+  i = ((cardTwo.length) - 1);
 
-    totalSum = sum +
+  while (i >= 0) {
+    value = Number(cardTwo.charAt(i));
+    sum = value;
+    totalSum = Number(totalSum) + sum;
     i = i - 2;
   }
 
 
+  let creditResult = document.getElementById('credit-output');
+
+  if ((totalSum % 10) == 0) {
+    if ((cardTwo.length) == 15) {
+      creditResult.innerHTML = "<img src ='images/amex.png'/>";
+    } else if ((cardTwo.length) == 13) {
+      creditResult.innerHTML = "<img src ='images/visa.png'/>";
+    } else if ((cardTwo.length) == 16) {
+      if (cardTwo.charAt(0) == "4") {
+        creditResult.innerHTML = "<img src ='images/visa.png'/>";
+      } else {
+        creditResult.innerHTML = "<img src ='images/mastercard.png'/>";
+      }
+    }
+  } else {
+    creditResult.innerHTML = "<img src='images/invalid.png'/>";
+  }
+
+  card = Number(card);
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
    *       variable, do not modify it. If you find it necessary to manipulate
