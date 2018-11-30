@@ -240,7 +240,7 @@ function credit() {
       }
     }
   } else {
-    creditResult.innerHTML = "<img src='images/invalid.png'/>";
+    creditResult.innerHTML = "<img src ='images/invalid.png'/>";
   }
 
   card = Number(card);
@@ -281,8 +281,25 @@ function credit() {
 
 function guess() {
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+  let randomNumber = Math.floor((Math.random() * 1000) + 1);
+  let userGuess = "";
+  let numberOfGuesses = "";
 
+  while (Number(userGuess) !== randomNumber) {
+    do {
+      userGuess = prompt("Please input an integer guess between 1 and 1000:");
+    } while ((userGuess % 1) != 0);
+    if (Number(userGuess) > randomNumber) {
+      alert("Your guess was greater than the random number.")
+    }
+    if (Number(userGuess) < randomNumber) {
+      alert("Your guess was less than the random number.")
+    }
+    numberOfGuesses = Number(numberOfGuesses) + 1;
+  }
+
+  let guessOutput = document.getElementById('guess-output');
+  guessOutput.innerHTML = "Random number: " + randomNumber + "<br/>" + "Number of guesses: " + numberOfGuesses;
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
@@ -317,6 +334,29 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+  do {
+    windspeed = prompt("Please input an integer wind speed greater or equal to 0:")
+  } while ((Number(windspeed) % 1) != 0 || Number(windspeed) <= 0);
+
+  windspeed = Number(windspeed);
+  let hurricaneOutput = document.getElementById('hurricane-output');
+
+  if (windspeed >= 157) {
+    hurricaneOutput.innerHTML = "Category 5 Hurricane.";
+  } else if (windspeed >= 130 && windspeed < 157) {
+    hurricaneOutput.innerHTML = "Category 4 Hurricane.";
+  } else if (windspeed >= 111 && windspeed < 130) {
+    hurricaneOutput.innerHTML = "Category 3 Hurricane.";
+  } else if (windspeed >= 96 && windspeed < 111) {
+    hurricaneOutput.innerHTML = "Category 2 Hurricane.";
+  } else if (windspeed >= 74 && windspeed < 96) {
+    hurricaneOutput.innerHTML = "Category 1 Hurricane.";
+  } else if (windspeed >= 39 && windspeed < 74) {
+    hurricaneOutput.innerHTML = "Tropical Storm.";
+  } else if (windspeed < 39) {
+    hurricaneOutput.innerHTML = "The skies are calm...";
+  }
+
 
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
