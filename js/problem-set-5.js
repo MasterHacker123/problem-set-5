@@ -388,6 +388,31 @@ function gymnastics() {
   let scores = []; // DO NOT MODIFY
   /////////////////// DO NOT MODIFY
 
+  let score = "";
+  let numberOfScores = "";
+
+  while (numberOfScores < 6) {
+    do {
+      score = prompt("Please input a score between 0.0 and 100.0:");
+    } while ( Number(score) <= 0 || Number(score) >= 100 );
+    scores.push(Number(score);
+    numberOfScores = numberOfScores + 1;
+  }
+
+  scores.sort(function(a, b){return a - b});
+  let min = scores[0];
+  let max = scores[5];
+
+  scores.splice(0, 1);
+  scores.splice(5, 1);
+
+  let average = (Number(scores[0]) + Number(scores[1]) + Number(scores[2]) + Number(scores[3])) / 4;
+  let gymnasticsOutput = document.getElementById('gymnastics-output');
+  gymnasticsOutput.innerHTML = "Discarded Values: " + min + ", " + max + "<br/>" + "Average Score: " + average;
+
+
+
+
   /*
    * NOTE: The 'total' variable should be representative of the sum of all
    *       six of the judges' scores.
