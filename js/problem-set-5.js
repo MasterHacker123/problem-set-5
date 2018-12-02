@@ -390,42 +390,42 @@ function gymnastics() {
 
   let scoreOne = "";
   do {
-    scoreOne = prompt("Please input a score between 0.0 and 100.0:");
+    scoreOne = prompt("Please input the first score between 0.0 and 100.0:");
   } while ( Number(scoreOne) <= 0 || Number(scoreOne) >= 100 );
   scoreOne = Number(scoreOne);
   scores.push(scoreOne);
 
   let scoreTwo = "";
   do {
-    scoreTwo = prompt("Please input a score between 0.0 and 100.0:");
+    scoreTwo = prompt("Please input the second score between 0.0 and 100.0:");
   } while ( Number(scoreTwo) <= 0 || Number(scoreTwo) >= 100 );
   scoreTwo = Number(scoreTwo);
   scores.push(scoreTwo);
   
   let scoreThree = "";
   do {
-    scoreThree = prompt("Please input a score between 0.0 and 100.0:");
+    scoreThree = prompt("Please input the third score between 0.0 and 100.0:");
   } while ( Number(scoreThree) <= 0 || Number(scoreThree) >= 100 );
   scoreThree = Number(scoreThree);
   scores.push(scoreThree);
   
   let scoreFour = "";
   do {
-    scoreFour = prompt("Please input a score between 0.0 and 100.0:");
+    scoreFour = prompt("Please input the fourth score between 0.0 and 100.0:");
   } while ( Number(scoreFour) <= 0 || Number(scoreFour) >= 100 );
   scoreFour = Number(scoreFour);
   scores.push(scoreFour);
   
   let scoreFive = "";
   do {
-    scoreFive = prompt("Please input a score between 0.0 and 100.0:");
+    scoreFive = prompt("Please input the fifth score between 0.0 and 100.0:");
   } while ( Number(scoreFive) <= 0 || Number(scoreFive) >= 100 );
   scoreFive = Number(scoreFive);
   scores.push(scoreFive);
   
   let scoreSix = "";
   do {
-    scoreSix = prompt("Please input a score between 0.0 and 100.0:");
+    scoreSix = prompt("Please input the sixth score between 0.0 and 100.0:");
   } while ( Number(scoreSix) <= 0 || Number(scoreSix) >= 100 );
   scoreSix = Number(scoreSix);
   scores.push(scoreSix);
@@ -438,7 +438,8 @@ function gymnastics() {
   scores.shift();
   scores.pop();
 
-  let average = (scores[0] + scores[1] + scores[2] + scores[3]) / 4;
+  let total = (scores[0] + scores[1] + scores[2] + scores[3]);
+  let average = total / 4;
   
   let gymnasticsOutput = document.getElementById('gymnastics-output');
   gymnasticsOutput.innerHTML = "Discarded Values: " + min + ", " + max + "<br/>" + "Average Score: " + average;
@@ -521,26 +522,26 @@ function reportCard() {
     valueOne = prompt("If this is the last homework grade, enter -1. Otherwise, enter another grade:");
   }
   
-  let valueTwo = prompt("Please enter a homework grade between 0.0 and 100");
+  let valueTwo = prompt("Please enter a quiz grade between 0.0 and 100");
   while (Number(valueTwo) != -1) {
     while (Number(valueTwo) < 0 || Number(valueTwo) > 100) {
-      valueTwo = prompt("Please enter a homework grade between 0.0 and 100");
+      valueTwo = prompt("Please enter a quiz grade between 0.0 and 100");
     } 
     valueTwo = Number(valueTwo);
     quizTotal = quizTotal + valueTwo;
     quizzes = quizzes + 1;
-    valueTwo = prompt("If this is the last homework grade, enter -1. Otherwise, enter another grade:");
+    valueTwo = prompt("If this is the last quiz grade, enter -1. Otherwise, enter another grade:");
   }
   
-  let valueThree = prompt("Please enter a homework grade between 0.0 and 100");
+  let valueThree = prompt("Please enter a test grade between 0.0 and 100");
   while (Number(valueThree) != -1) {
     while (Number(valueThree) < 0 || Number(valueThree) > 100) {
-      valueThree = prompt("Please enter a homework grade between 0.0 and 100");
+      valueThree = prompt("Please enter a test grade between 0.0 and 100");
     } 
     valueThree = Number(valueThree);
     testTotal = testTotal + valueThree;
     tests = tests + 1;
-    valueThree = prompt("If this is the last homework grade, enter -1. Otherwise, enter another grade:");
+    valueThree = prompt("If this is the last test grade, enter -1. Otherwise, enter another grade:");
   }
   
   let finalGrade = 0.1 * (homeworkTotal / homeworks) + 0.3 * (quizTotal / quizzes) + 0.6 * (testTotal / tests);
