@@ -544,7 +544,8 @@ function reportCard() {
   }
   
   let finalGrade = 0.1 * (homeworkTotal / homeworks) + 0.3 * (quizTotal / quizzes) + 0.6 * (testTotal / tests);
-  
+  let reportCardOutput = document.getElementById('report-card-output');
+  reportCardOutput.innerHTML = "Final Grade: " + finalGrade;
   
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
