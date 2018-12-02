@@ -395,7 +395,7 @@ function gymnastics() {
     do {
       score = prompt("Please input a score between 0.0 and 100.0:");
     } while ( Number(score) <= 0 || Number(score) >= 100 );
-    scores.push(Number(score);
+    scores.push(Number(score));
     numberOfScores = numberOfScores + 1;
   }
 
@@ -407,6 +407,7 @@ function gymnastics() {
   scores.splice(5, 1);
 
   let average = (Number(scores[0]) + Number(scores[1]) + Number(scores[2]) + Number(scores[3])) / 4;
+  
   let gymnasticsOutput = document.getElementById('gymnastics-output');
   gymnasticsOutput.innerHTML = "Discarded Values: " + min + ", " + max + "<br/>" + "Average Score: " + average;
 
