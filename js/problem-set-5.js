@@ -544,7 +544,16 @@ function reportCard() {
     valueThree = prompt("If this is the last test grade, enter -1. Otherwise, enter another grade:");
   }
   
-  let finalGrade = 0.1 * (homeworkTotal / homeworks) + 0.3 * (quizTotal / quizzes) + 0.6 * (testTotal / tests);
+  let homeworkGrade = homeworkTotal / homeworks;
+  homeworkGrade = homeworkGrade.toFixed(2);
+  
+  let quizGrade = quizTotal / quizzes;
+  quizGrade = quizGrade.toFixed(2);
+  
+  let testGrade = testTotal / tests;
+  testGrade = testGrade.toFixed(2);
+  
+  let finalGrade = 0.1 * (homeworkGrade) + 0.3 * (quizGrade) + 0.6 * (testGrade);
   let reportCardOutput = document.getElementById('report-card-output');
   reportCardOutput.innerHTML = "Final Grade: " + finalGrade;
   
