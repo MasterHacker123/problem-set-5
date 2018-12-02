@@ -510,16 +510,40 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
-  let valueOne = prompt("Please enter a homework grade between 0.0 and 100");
+  let valueOne = prompt("Please enter a homework grade between 0.0 and 100");;
   while (Number(valueOne) != -1) {
-    do {
+    while (Number(valueOne) < 0 || Number(valueOne) > 100) {
       valueOne = prompt("Please enter a homework grade between 0.0 and 100");
-    } while (Number(valueOne) < 0 || Number(valueOne) > 100)
+    } 
     valueOne = Number(valueOne);
     homeworkTotal = homeworkTotal + valueOne;
     homeworks = homeworks + 1;
+    valueOne = prompt("If this is the last homework grade, enter -1. Otherwise, enter another grade:");
   }
-    
+  
+  let valueTwo = prompt("Please enter a homework grade between 0.0 and 100");
+  while (Number(valueTwo) != -1) {
+    while (Number(valueTwo) < 0 || Number(valueTwo) > 100) {
+      valueTwo = prompt("Please enter a homework grade between 0.0 and 100");
+    } 
+    valueTwo = Number(valueTwo);
+    quizTotal = quizTotal + valueTwo;
+    quizzes = quizzes + 1;
+    valueTwo = prompt("If this is the last homework grade, enter -1. Otherwise, enter another grade:");
+  }
+  
+  let valueThree = prompt("Please enter a homework grade between 0.0 and 100");
+  while (Number(valueThree) != -1) {
+    while (Number(valueThree) < 0 || Number(valueThree) > 100) {
+      valueThree = prompt("Please enter a homework grade between 0.0 and 100");
+    } 
+    valueThree = Number(valueThree);
+    testTotal = testTotal + valueThree;
+    tests = tests + 1;
+    valueThree = prompt("If this is the last homework grade, enter -1. Otherwise, enter another grade:");
+  }
+  
+  let finalGrade = 0.1 * (homeworkTotal / homeworks) + 0.3 * (quizTotal / quizzes) + 0.6 * (testTotal / tests);
   
   
   /////////////////////// DO NOT MODIFY
