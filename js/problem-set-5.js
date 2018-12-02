@@ -388,25 +388,57 @@ function gymnastics() {
   let scores = []; // DO NOT MODIFY
   /////////////////// DO NOT MODIFY
 
-  let score = "";
-  let numberOfScores = "";
+  let scoreOne = "";
+  do {
+    scoreOne = prompt("Please input a score between 0.0 and 100.0:");
+  } while ( Number(scoreOne) <= 0 || Number(scoreOne) >= 100 );
+  scoreOne = Number(scoreOne);
+  scores.push(scoreOne);
 
-  while (numberOfScores < 6) {
-    do {
-      score = prompt("Please input a score between 0.0 and 100.0:");
-    } while ( Number(score) <= 0 || Number(score) >= 100 );
-    scores.push(Number(score));
-    numberOfScores = numberOfScores + 1;
-  }
-
+  let scoreTwo = "";
+  do {
+    scoreTwo = prompt("Please input a score between 0.0 and 100.0:");
+  } while ( Number(scoreTwo) <= 0 || Number(scoreTwo) >= 100 );
+  scoreTwo = Number(scoreTwo);
+  scores.push(scoreTwo);
+  
+  let scoreThree = "";
+  do {
+    scoreThree = prompt("Please input a score between 0.0 and 100.0:");
+  } while ( Number(scoreThree) <= 0 || Number(scoreThree) >= 100 );
+  scoreThree = Number(scoreThree);
+  scores.push(scoreThree);
+  
+  let scoreFour = "";
+  do {
+    scoreFour = prompt("Please input a score between 0.0 and 100.0:");
+  } while ( Number(scoreFour) <= 0 || Number(scoreFour) >= 100 );
+  scoreFour = Number(scoreFour);
+  scores.push(scoreFour);
+  
+  let scoreFive = "";
+  do {
+    scoreFive = prompt("Please input a score between 0.0 and 100.0:");
+  } while ( Number(scoreFive) <= 0 || Number(scoreFive) >= 100 );
+  scoreFive = Number(scoreFive);
+  scores.push(scoreFive);
+  
+  let scoreSix = "";
+  do {
+    scoreSix = prompt("Please input a score between 0.0 and 100.0:");
+  } while ( Number(scoreSix) <= 0 || Number(scoreSix) >= 100 );
+  scoreSix = Number(scoreSix);
+  scores.push(scoreSix);
+  
+  
   scores.sort(function(a, b){return a - b});
   let min = scores[0];
   let max = scores[5];
 
-  scores.splice(0, 1);
-  scores.splice(5, 1);
+  scores.shift();
+  scores.pop();
 
-  let average = (Number(scores[0]) + Number(scores[1]) + Number(scores[2]) + Number(scores[3])) / 4;
+  let average = (scores[0] + scores[1] + scores[2] + scores[3]) / 4;
   
   let gymnasticsOutput = document.getElementById('gymnastics-output');
   gymnasticsOutput.innerHTML = "Discarded Values: " + min + ", " + max + "<br/>" + "Average Score: " + average;
@@ -478,9 +510,16 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
-  let valueOne;
-  do {
+  let valueOne = prompt("Please enter a homework grade between 0.0 and 100");
+  while (Number(valueOne) != -1) {
+    do {
       valueOne = prompt("Please enter a homework grade between 0.0 and 100");
+    } while (Number(valueOne) < 0 || Number(valueOne) > 100)
+    valueOne = Number(valueOne);
+    homeworkTotal = homeworkTotal + valueOne;
+    homeworks = homeworks + 1;
+  }
+    
   
   
   /////////////////////// DO NOT MODIFY
