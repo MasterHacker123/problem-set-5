@@ -478,7 +478,10 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
-
+  let valueOne;
+    do {
+      valueOne = prompt("Please enter a homework grade between 0.0 and 100");
+  
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
     testTotal, ////////// DO NOT MODIFY
