@@ -335,8 +335,8 @@ function hurricane() {
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
   do {
-    windspeed = prompt("Please input an integer wind speed greater or equal to 0:")
-  } while ((Number(windspeed) % 1) != 0 || Number(windspeed) <= 0);
+    windspeed = prompt("Please input an integer wind speed greater than or equal to 0:")
+  } while ((Number(windspeed) % 1) != 0 || Number(windspeed) < 0);
 
   windspeed = Number(windspeed);
   let hurricaneOutput = document.getElementById('hurricane-output');
@@ -391,42 +391,42 @@ function gymnastics() {
   let scoreOne = "";
   do {
     scoreOne = prompt("Please input the first score between 0.0 and 10.0:");
-  } while ( Number(scoreOne) <= 0 || Number(scoreOne) >= 10 );
+  } while ( Number(scoreOne) < 0 || Number(scoreOne) > 10 );
   scoreOne = Number(scoreOne);
   scores.push(scoreOne);
 
   let scoreTwo = "";
   do {
     scoreTwo = prompt("Please input the second score between 0.0 and 10.0:");
-  } while ( Number(scoreTwo) <= 0 || Number(scoreTwo) >= 10 );
+  } while ( Number(scoreTwo) < 0 || Number(scoreTwo) > 10 );
   scoreTwo = Number(scoreTwo);
   scores.push(scoreTwo);
   
   let scoreThree = "";
   do {
     scoreThree = prompt("Please input the third score between 0.0 and 10.0:");
-  } while ( Number(scoreThree) <= 0 || Number(scoreThree) >= 10 );
+  } while ( Number(scoreThree) < 0 || Number(scoreThree) > 10 );
   scoreThree = Number(scoreThree);
   scores.push(scoreThree);
   
   let scoreFour = "";
   do {
     scoreFour = prompt("Please input the fourth score between 0.0 and 10.0:");
-  } while ( Number(scoreFour) <= 0 || Number(scoreFour) >= 10 );
+  } while ( Number(scoreFour) < 0 || Number(scoreFour) > 10 );
   scoreFour = Number(scoreFour);
   scores.push(scoreFour);
   
   let scoreFive = "";
   do {
     scoreFive = prompt("Please input the fifth score between 0.0 and 10.0:");
-  } while ( Number(scoreFive) <= 0 || Number(scoreFive) >= 10 );
+  } while ( Number(scoreFive) < 0 || Number(scoreFive) > 10 );
   scoreFive = Number(scoreFive);
   scores.push(scoreFive);
   
   let scoreSix = "";
   do {
     scoreSix = prompt("Please input the sixth score between 0.0 and 10.0:");
-  } while ( Number(scoreSix) <= 0 || Number(scoreSix) >= 10 );
+  } while ( Number(scoreSix) < 0 || Number(scoreSix) > 10 );
   scoreSix = Number(scoreSix);
   scores.push(scoreSix);
   
