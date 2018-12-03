@@ -436,6 +436,7 @@ function gymnastics() {
 
   total = (scores[1] + scores[2] + scores[3] + scores[4]);
   let average = total / 4;
+  average = average.toFixed(2);
   
   let gymnasticsOutput = document.getElementById('gymnastics-output');
   gymnasticsOutput.innerHTML = "Discarded: " + min + ", " + max + "<br/>" + "Score: " + average;
@@ -504,43 +505,52 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
-  let valueOne;
+  let valueOne = prompt("Please enter a homework grade between 0.0 and 100:");
   
   while (Number(valueOne) != -1) {
     while (Number(valueOne) < -1 || Number(valueOne) > 100) {
       valueOne = prompt("Please enter a homework grade between 0.0 and 100. If all homework grades have been inputted, enter -1:");
     } 
-    if (Number(valueOne) >= 0 && Number(valueOne) <= 100){
+    if (Number(valueOne) = -1) {
+      break;
+    } else if (Number(valueOne) >= 0 && Number(valueOne) <= 100){
       valueOne = Number(valueOne);
       homeworkTotal = homeworkTotal + valueOne;
       homeworks = homeworks + 1;
     }
+    valueOne = prompt("Please enter a homework grade between 0.0 and 100. If all homework grades have been inputted, enter -1:");
   }
   
-  let valueTwo;
+  let valueTwo = prompt("Please enter a quiz grade between 0.0 and 100:");
   
   while (Number(valueTwo) != -1) {
     while (Number(valueTwo) < -1 || Number(valueTwo) > 100) {
       valueTwo = prompt("Please enter a quiz grade between 0.0 and 100. If all quiz grades have been inputted, enter -1:");
     } 
-    if (Number(valueTwo) >= 0 && Number(valueTwo) <= 100){
+    if (Number(valueTwo) = -1) {
+      break;
+    } else if (Number(valueTwo) >= 0 && Number(valueTwo) <= 100){
       valueTwo = Number(valueTwo);
       quizTotal = quizTotal + valueTwo;
       quizzes = quizzes + 1;
     }
+    valueTwo = prompt("Please enter a quiz grade between 0.0 and 100. If all quiz grades have been inputted, enter -1:");
   }
   
-  let valueThree;
+  let valueThree = prompt("Please enter a test grade between 0.0 and 100:");
   
   while (Number(valueThree) != -1) {
     while (Number(valueThree) < -1 || Number(valueThree) > 100) {
       valueThree = prompt("Please enter a test grade between 0.0 and 100. If all test grades have been inputted, enter -1:");
     } 
-     if (Number(valueThree) >= 0 && Number(valueThree) <= 100){
+     if (Number(valueThree) = -1) {
+      break;
+    } else if (Number(valueThree) >= 0 && Number(valueThree) <= 100){
       valueThree = Number(valueThree);
       testTotal = testTotal + valueThree;
       tests = tests + 1;
     }
+    valueThree = prompt("Please enter a test grade between 0.0 and 100. If all test grades have been inputted, enter -1:");
   }
   
   let homeworkGrade = homeworkTotal / homeworks;
