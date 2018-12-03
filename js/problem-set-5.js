@@ -507,7 +507,7 @@ function reportCard() {
   ///////////////////// DO NOT MODIFY
 
   /*
-   * NOTE: The 'tests', 'quizzes', and 'homeworks' variables should be
+   *  NOTE: The 'tests', 'quizzes', and 'homeworks' variables should be
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
