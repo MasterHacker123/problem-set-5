@@ -1,5 +1,5 @@
 /*
- * Mario. 10 points.
+ * Mario.  10 points.
  *
  * Write a function that prompts the user for a height, and prints a
  * Mario-style half-pyramid of that height.
