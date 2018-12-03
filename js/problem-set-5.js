@@ -554,6 +554,7 @@ function reportCard() {
   testGrade = testGrade.toFixed(2);
   
   let finalGrade = 0.1 * (homeworkGrade) + 0.3 * (quizGrade) + 0.6 * (testGrade);
+  finalGrade = finalGrade.toFixed(2);
   let reportCardOutput = document.getElementById('report-card-output');
   reportCardOutput.innerHTML = "Tests: " + testGrade + "<br/>" + "Quizzes: " + quizGrade + "<br/>" + "Homework: " + homeworkGrade + "<br/>" + "Grade: " + finalGrade;
   
