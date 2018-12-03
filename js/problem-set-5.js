@@ -442,7 +442,7 @@ function gymnastics() {
   let average = total / 4;
   
   let gymnasticsOutput = document.getElementById('gymnastics-output');
-  gymnasticsOutput.innerHTML = "Discarded Values: " + min + ", " + max + "<br/>" + "Average Score: " + average;
+  gymnasticsOutput.innerHTML = "Discarded: " + min + ", " + max + "<br/>" + "Score: " + average;
 
 
 
