@@ -438,7 +438,7 @@ function gymnastics() {
   scores.shift();
   scores.pop();
 
-  let total = (scores[0] + scores[1] + scores[2] + scores[3]);
+  total = (scores[0] + scores[1] + scores[2] + scores[3]);
   let average = total / 4;
   
   let gymnasticsOutput = document.getElementById('gymnastics-output');
@@ -555,7 +555,7 @@ function reportCard() {
   
   let finalGrade = 0.1 * (homeworkGrade) + 0.3 * (quizGrade) + 0.6 * (testGrade);
   let reportCardOutput = document.getElementById('report-card-output');
-  reportCardOutput.innerHTML = "Final Grade: " + finalGrade;
+  reportCardOutput.innerHTML = "Tests: " + testGrade + "<br/>" + "Quizzes: " + quizGrade + "<br/>" + "Homework: " + homeworkGrade + "<br/>" + "Grade: " + finalGrade;
   
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
