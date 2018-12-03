@@ -437,10 +437,7 @@ function gymnastics() {
   let min = scores[0];
   let max = scores[5];
 
-  scores.shift();
-  scores.pop();
-
-  total = (scores[0] + scores[1] + scores[2] + scores[3]);
+  total = (scores[1] + scores[2] + scores[3] + scores[4]);
   let average = total / 4;
   
   let gymnasticsOutput = document.getElementById('gymnastics-output');
