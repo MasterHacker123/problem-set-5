@@ -430,9 +430,6 @@ function gymnastics() {
   scoreSix = Number(scoreSix);
   scores.push(scoreSix);
   
-  let originalScores = scores;
-  
-  
   scores.sort(function(a, b){return a - b});
   let min = scores[0];
   let max = scores[5];
@@ -443,9 +440,6 @@ function gymnastics() {
   let gymnasticsOutput = document.getElementById('gymnastics-output');
   gymnasticsOutput.innerHTML = "Discarded: " + min + ", " + max + "<br/>" + "Score: " + average;
 
-
-
-  scores = originalScores;
   /*
    * NOTE: The 'total' variable should be representative of the sum of all
    *       six of the judges' scores.
