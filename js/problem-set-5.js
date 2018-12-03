@@ -430,6 +430,8 @@ function gymnastics() {
   scoreSix = Number(scoreSix);
   scores.push(scoreSix);
   
+  let originalScores = scores;
+  
   
   scores.sort(function(a, b){return a - b});
   let min = scores[0];
@@ -446,7 +448,7 @@ function gymnastics() {
 
 
 
-
+  scores = originalScores;
   /*
    * NOTE: The 'total' variable should be representative of the sum of all
    *       six of the judges' scores.
