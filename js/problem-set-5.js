@@ -511,7 +511,7 @@ function reportCard() {
     while (Number(valueOne) < -1 || Number(valueOne) > 100) {
       valueOne = prompt("Please enter a homework grade between 0.0 and 100. If all homework grades have been inputted, enter -1:");
     } 
-    if (Number(valueOne) = -1) {
+    if (Number(valueOne) == -1) {
       break;
     } else if (Number(valueOne) >= 0 && Number(valueOne) <= 100){
       valueOne = Number(valueOne);
@@ -527,7 +527,7 @@ function reportCard() {
     while (Number(valueTwo) < -1 || Number(valueTwo) > 100) {
       valueTwo = prompt("Please enter a quiz grade between 0.0 and 100. If all quiz grades have been inputted, enter -1:");
     } 
-    if (Number(valueTwo) = -1) {
+    if (Number(valueTwo) == -1) {
       break;
     } else if (Number(valueTwo) >= 0 && Number(valueTwo) <= 100){
       valueTwo = Number(valueTwo);
@@ -543,7 +543,7 @@ function reportCard() {
     while (Number(valueThree) < -1 || Number(valueThree) > 100) {
       valueThree = prompt("Please enter a test grade between 0.0 and 100. If all test grades have been inputted, enter -1:");
     } 
-     if (Number(valueThree) = -1) {
+     if (Number(valueThree) == -1) {
       break;
     } else if (Number(valueThree) >= 0 && Number(valueThree) <= 100){
       valueThree = Number(valueThree);
